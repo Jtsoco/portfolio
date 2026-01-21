@@ -1,0 +1,15 @@
+.red {
+  color: #F63049;
+}
+
+.section-page {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111F35;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
