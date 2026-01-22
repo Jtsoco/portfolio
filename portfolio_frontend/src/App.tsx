@@ -4,13 +4,19 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { introductionSection } from './sections/introductionSection'
 import { SectionPage } from './sections/sectionPage'
-
+import { AboutSection } from './sections/aboutSection'
+import { LanguageContext } from './contexts/languageContext'
 function App() {
   const [count, setCount] = useState(0)
+  const [userLanguage, setUserLanguage] = useState<'en' | 'jp'>('en');
 
   return (
     <>
+    <LanguageContext.Provider>
+
       <SectionPage displayComponent={introductionSection} />
+      <AboutSection />
+    </LanguageContext.Provider>
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
