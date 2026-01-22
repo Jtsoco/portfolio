@@ -1,5 +1,5 @@
 import '../stylesheet.css';
-export function IntroductionSection() {
+export function introductionSection() {
   return (
     <div>
       <h1> Hi, I'm <span className="red">Jackson</span>.</h1>

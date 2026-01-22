@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { IntroductionSection } from './sections/IntroductionSection'
+import { introductionSection } from './sections/introductionSection'
 import { SectionPage } from './sections/sectionPage'
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-      <SectionPage displayComponent={IntroductionSection} />
+      <SectionPage displayComponent={introductionSection} />
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
