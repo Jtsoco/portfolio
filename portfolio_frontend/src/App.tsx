@@ -1,22 +1,33 @@
-import { useState } from 'react'
+import { useState, useRef} from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { introductionSection } from './sections/introductionSection'
+import { IntroductionSection } from './sections/introductionSection'
 import { SectionPage } from './sections/sectionPage'
 import { AboutSection } from './sections/aboutSection'
 import { LanguageContext } from './contexts/languageContext'
+import { EnglishText, JapaneseText} from './assets/text'
+
 function App() {
   const [count, setCount] = useState(0)
   const [userLanguage, setUserLanguage] = useState<'en' | 'jp'>('en');
+  const targetRef = useRef(null);
 
   return (
     <>
-    <LanguageContext.Provider>
 
-      <SectionPage displayComponent={introductionSection} />
-      <AboutSection />
+    <LanguageContext.Provider value={{
+      'en': EnglishText,
+      'jp': JapaneseText,
+      setLanguage: setUserLanguage,
+      getLanguage: userLanguage,
+    }}>
+
+        <IntroductionSection targetRef={targetRef}/>
+        <AboutSection targetRef={targetRef}/>
+
     </LanguageContext.Provider>
+
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />

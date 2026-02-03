@@ -102,3 +102,18 @@ button:focus-visible {
   margin-bottom: 1rem;
   color:#F63049;
 }
+
+
+/* About Section elements */
+.about-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  flex: 1;
+  max-width: 30vw;
+  min-width: 300px;
+}
+
+
+.red {
+  color: #F63049;
+}
