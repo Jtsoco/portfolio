@@ -7,6 +7,7 @@ import { SectionPage } from './sections/sectionPage'
 import { AboutSection } from './sections/aboutSection'
 import { LanguageContext } from './contexts/languageContext'
 import { EnglishText, JapaneseText} from './assets/text'
+import { GameSection } from './sections/gameSection'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,6 +26,7 @@ function App() {
 
         <IntroductionSection targetRef={targetRef}/>
         <AboutSection targetRef={targetRef}/>
+        <GameSection />
 
     </LanguageContext.Provider>
 
