@@ -2,6 +2,7 @@ import '../stylesheet.css';
 interface introProps {
   targetRef: React.RefObject<null>;
 }
+import Button from 'react-bootstrap/Button';
 export function IntroductionSection(props: introProps) {
 
   const onClickAboutMe = () => {
@@ -13,11 +14,10 @@ export function IntroductionSection(props: introProps) {
     <div className="section-page">
       <div>
 
-        <h1> Hi, I'm <span className="red">Jackson</span>.</h1>
+        <h1> Hi, I'm <span className="blue">Jackson</span>.</h1>
         <h2> I'm a programmer and Teacher </h2>
-        <button onClick={() => onClickAboutMe()} >
-          About Me and Projects
-          </button>
+        <Button onClick={() => onClickAboutMe()}variant="primary" >About Me and Projects</Button>
+
       </div>
     </div>
   )

@@ -16,6 +16,7 @@ function App() {
 
   return (
     <>
+    <div className="app-layout">
 
     <LanguageContext.Provider value={{
       'en': EnglishText,
@@ -29,6 +30,7 @@ function App() {
         <GameSection />
 
     </LanguageContext.Provider>
+      </div>
 
       <div>
         <a href="https://vite.dev" target="_blank">

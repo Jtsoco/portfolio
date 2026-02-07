@@ -42,10 +42,10 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #111F35;
+  background-color: rgb(0, 157, 255);
   cursor: pointer;
-  border-color: #F63049;
-  color: #F63049;
+  border-color: blue;
+  color: black;
 
   transition: background-color 0.3s;
 }

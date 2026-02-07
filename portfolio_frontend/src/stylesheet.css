@@ -2,13 +2,26 @@
   color: #F63049;
 }
 
+.blue {
+  color: #646cff;
+}
+
+.white {
+  color: #FFFFFF;
+}
+
+.bone-white {
+  color: #E5E7EB;
+}
+
 .section-page {
   height: 100vh;
   scroll-snap-align: start;
   display: flex;
   justify-content: center;
   /* align-items: center; */
-  background-color: #111F35;
+  background-color: #E5E7EB;
+  background: none;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -36,10 +49,10 @@
   width: 96px;
   height: 96px;
   object-fit: contain;
-  border-color:#F63049;
+  border-color: grey;
   border-radius: 12px;
-  border: 2px solid #F63049;
-  border-image: linear-gradient(to left top, #F63049, #8A244B) 1;
+  border: 2px solid grey;
+  border-image: linear-gradient(to left top, grey, #E5E7EB) 1;
 
 }
 
@@ -47,13 +60,22 @@
   display: flex;
   gap: 2rem;
   padding: 2rem;
+  background-color: #E5E7EB;
+  border-radius: 12px;
 }
 
 .section-title {
   font-size: 2.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color:#F63049;
+  color:black;
+}
+.secondary-bg {
+  background-color: #F3F4F6;
+  border-radius: 12px;
+  padding-top: 1rem;
+
+  color: black;
 }
 
 
@@ -67,9 +89,7 @@
 }
 
 
-.red {
-  color: #F63049;
-}
+
 
 
 .project-display {
@@ -90,12 +110,30 @@
   height: 500px;
   width: 500px;
   /* this for now until i set picture size properly */
+  border-radius: 12px;
 
+}
+.game {
+  height: 500px;
+  width: 500px;
+  border-radius: 12px;
 }
 
 .carousel {
-  height: 600px;
+  height: 675px;
   width: 100%;
+  border-radius: 12px;
+  /* padding: 16px; */
+}
+.game-container {
+  height: 675px;
+  width: 650px;
+  border-radius: 12px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  /* padding: 16px; */
 }
 
 .carousel-caption {
@@ -107,24 +145,83 @@
     align-items: center;
     justify-content: center;
     display: flex;
-}
-.carousel-inner-caption {
+    color: black;
+  }
+  .carousel-inner-caption {
+  height: 150px;
   padding-top: 8px;
   align-items: center;
   text-align: center;
   max-width: 400px;
+  color: black;
 
 }
 
+.carousel-inner {
+  height: 675 !important;
+}
+.carousel-inner-caption h3 {
+  border-bottom: 2px solid grey;
+}
+.game-caption {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+
+    max-width: 400px;
+    /* width: 600px; */
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    color: black;
+    margin-top: 8px;
+}
+.game-caption h3 {
+  border-bottom: 2px solid grey;
+}
+.game-controls {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto; /* Changed to overflow-x for horizontal scrolling */
+  gap: 8px; /* Increased gap for better spacing */
+  padding: 0 8px;
+}
+.game-controls-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  border: 1px solid #ccc; /* Softer border color */
+  border-radius: 8px;
+  padding: 8px; /* Increased padding */
+  background-color: #fff; /* Light background for contrast */
+  min-width: 80px; /* Minimum width to prevent squishing */
+  transition: box-shadow 0.2s ease; /* Smooth hover effect */
+}
+.game-controls-card p {
+  margin: 2px 0; /* Reduced margin for tighter layout */
+  font-size: 0.9rem; /* Slightly larger font */
+  font-weight: 500; /* Medium weight for emphasis */
+  text-align: center;
+}
+.game-controls-card:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+}
 .carousel-indicators {
-  bottom: 90px !important;
+  top: 480px !important;
 }
 
 .carousel-indicators button {
-  background-color: #F63049 !important;
-  /* border-radius: 50%; */
+  background-color: white !important;
+  border-radius: 25%;
   width: 12px ;
   height: 12px !important;
-  border: solid black !important;
+  border: solid #0D6EFD !important;
   opacity: 0.7;
+
 }
