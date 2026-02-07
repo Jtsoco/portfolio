@@ -1,6 +1,9 @@
 import '../stylesheet.css';
 import Carousel from 'react-bootstrap/Carousel';
 import { useState } from 'react';
+import { pyxelGameInfo } from '../assets/carouselItemInfo/pyxelGameCarousel';
+import Image from 'react-bootstrap/Image';
+import 'bootstrap/dist/css/bootstrap.min.css';  // Add this line
 
 export function GameSection() {
 
@@ -19,7 +22,7 @@ export function GameSection() {
 
   if (isGameLoaded) {
   return (
-    <div className='section-page'>
+    <div className='section-page section-column'>
       <button onClick={toggleGameLoad}>Unload Game</button>
       <iframe src="games/dungeon_explorer.html" width="600" height="600" title="Dungeon Explorer Game">
 
@@ -28,32 +31,21 @@ export function GameSection() {
   )
 } else {
   return (
-    <div className='section-page'>
+    <div className='section-page section-column'>
       <button onClick={toggleGameLoad}>Load Game</button>
       <Carousel>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="games/dungeon_explorer_1.png"
-            alt="First slide"
-          />
-          <Carousel.Caption>
-            <h3>Dungeon Explorer - Screenshot 1</h3>
-            <p>Explore the dungeon and find treasures!</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="games/pyxel-boss.png"
-            alt="Second slide"
-          />
+        { pyxelGameInfo().map((item, index) => (
+          <Carousel.Item key={index}>
+            <Image className="carousel-image border border-primary border-2" src={item.src} alt={item.alt} />
+            <Carousel.Caption className="carousel-caption">
+              <div className="carousel-inner-caption">
 
-          <Carousel.Caption>
-            <h3>Dungeon Explorer - Screenshot 2</h3>
-            <p>Avoid traps and defeat monsters!</p>
-          </Carousel.Caption>
-        </Carousel.Item>
+              <h3>{item.captionTitle}</h3>
+              <p>{item.captionText}</p>
+              </div>
+            </Carousel.Caption>
+          </Carousel.Item>
+        )) }
       </Carousel>
     </div>
   )

@@ -14,6 +14,13 @@
   padding: 0;
   padding-top: 80px;
 }
+.section-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+}
 
 
 
@@ -75,4 +82,44 @@
 .project-pictures {
   display: flex;
   gap: 1rem;
+}
+body {
+  margin: 0 !important;  /* Override Bootstrap's margin */
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif !important;  /* Match your root font */
+  background-color: #111F35 !important;  /* Your background */
+  color: rgba(255, 255, 255, 0.87) !important;  /* Your text color */
+}
+
+/* Reset other Bootstrap globals if needed */
+* {
+  box-sizing: border-box !important;  /* Ensure consistency */
+}
+
+.carousel-image {
+  height: 500px;
+  width: 500px;
+  /* this for now until i set picture size properly */
+
+}
+
+.carousel {
+  height: 600px;
+  width: 100%;
+}
+
+.carousel-caption {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    /* width: 600px; */
+    /* justify-content: center; */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.carousel-inner-caption {
+  padding-top: 8px;
+  align-items: center;
+  text-align: center;
+  max-width: 400px;
 }
