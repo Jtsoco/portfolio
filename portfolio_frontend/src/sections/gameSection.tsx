@@ -3,7 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import { useState } from 'react';
 import { pyxelGameInfo } from '../assets/carouselItemInfo/pyxelGameCarousel';
 import Image from 'react-bootstrap/Image';
-import 'bootstrap/dist/css/bootstrap.min.css';  // Add this line
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export function GameSection() {
 
