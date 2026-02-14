@@ -41,6 +41,10 @@ export function GameSection() {
       <div className="game-caption">
         <h3>Dungeon Explorer</h3>
         <div className="game-controls">
+          <GameControlsComponent action='Menu' method="Tab">
+            </GameControlsComponent>
+          <GameControlsComponent action='Select' method="Enter/Return">
+            </GameControlsComponent>
 
           <GameControlsComponent action='Move' method="⬆️⬇️⬅️➡️">
             </GameControlsComponent>
@@ -48,9 +52,7 @@ export function GameSection() {
             </GameControlsComponent>
           <GameControlsComponent action='Shield' method="S Key">
             </GameControlsComponent>
-          <GameControlsComponent action='Menu' method="Tab">
-            </GameControlsComponent>
-          <GameControlsComponent action='Select' method="Enter/Return">
+          <GameControlsComponent action='Jump' method="Spacebar">
             </GameControlsComponent>
 
         </div>

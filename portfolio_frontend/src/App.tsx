@@ -28,6 +28,7 @@ function App() {
         <IntroductionSection targetRef={targetRef}/>
         <AboutSection targetRef={targetRef}/>
         <GameSection />
+        {/* next section is current project, show wireframe and database schema from book app */}
 
     </LanguageContext.Provider>
       </div>
