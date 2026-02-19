@@ -1,6 +1,6 @@
 import '../stylesheet.css';
 interface introProps {
-  targetRef: React.RefObject<null>;
+  targetRef: React.RefObject<null | HTMLElement>;
 }
 import Button from 'react-bootstrap/Button';
 export function IntroductionSection(props: introProps) {

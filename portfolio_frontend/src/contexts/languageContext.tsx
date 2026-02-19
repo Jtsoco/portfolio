@@ -1,4 +1,4 @@
-import { createContext, Dispatch, type SetStateAction} from "react";
+import { createContext, type Dispatch, type SetStateAction} from "react";
 import { EnglishText, JapaneseText } from "../assets/text";
 
 interface LanguageContextType {

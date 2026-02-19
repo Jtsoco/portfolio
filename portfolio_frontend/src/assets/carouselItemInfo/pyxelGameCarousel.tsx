@@ -1,10 +1,10 @@
 
-interface CarouselItemInfo {
-  src: string;
-  alt: string;
-  captionTitle: string;
-  captionText: string;
-}
+// interface CarouselItemInfo {
+//   src: string;
+//   alt: string;
+//   captionTitle: string;
+//   captionText: string;
+// }
 export function pyxelGameInfo() {
   return [
     {
