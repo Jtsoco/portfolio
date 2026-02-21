@@ -1,6 +1,7 @@
 import { useState, useRef} from 'react'
 
 import './App.css'
+import { IntroductionSection } from './sections/IntroductionSection'
 import { AboutSection } from './sections/aboutSection'
 import { LanguageContext } from './contexts/languageContext'
 import { EnglishText, JapaneseText} from './assets/text'
