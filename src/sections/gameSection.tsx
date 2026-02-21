@@ -35,7 +35,7 @@ export function GameSection() {
       </div>
        <div className="game-container secondary-bg">
 
-      <iframe src="src/assets/games/dungeon_explorer.html"  className="game" title="Dungeon Explorer Game">
+      <iframe src="public/games/dungeon_explorer.html"  className="game" title="Dungeon Explorer Game">
 
       </iframe>
       <div className="game-caption">
