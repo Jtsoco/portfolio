@@ -22,6 +22,7 @@ export function IntroductionSection(props: introProps) {
 
         <Button onClick={() => scrollToSection(props.targetRef)}variant="primary" >About Me and Projects</Button>
         <Button onClick={() => scrollToSection(props.gameTargetRef)} >Play My Game</Button>
+        <Button href="https://github.com/Jtsoco">Github</Button>
 
         </div>
       </div>
