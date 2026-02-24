@@ -1,13 +1,15 @@
 import '../stylesheet.css';
 interface introProps {
   targetRef: React.RefObject<null | HTMLElement>;
-}
+  gameTargetRef: React.RefObject<null | HTMLElement>;
+};
+
 import Button from 'react-bootstrap/Button';
 export function IntroductionSection(props: introProps) {
 
-  const onClickAboutMe = () => {
-    if (props.targetRef && props.targetRef.current) {
-      props.targetRef.current.scrollIntoView({ behavior: 'smooth' });
+  const scrollToSection = (ref: React.RefObject<null | HTMLElement>) => {
+    if (ref && ref.current) {
+      ref.current.scrollIntoView({ behavior: 'smooth' });
     }
   }
   return (
@@ -18,7 +20,8 @@ export function IntroductionSection(props: introProps) {
         <h2> I'm a programmer and Teacher </h2>
         <div className="button-container">
 
-        <Button onClick={() => onClickAboutMe()}variant="primary" >About Me and Projects</Button>
+        <Button onClick={() => scrollToSection(props.targetRef)}variant="primary" >About Me and Projects</Button>
+        <Button onClick={() => scrollToSection(props.gameTargetRef)} >Play My Game</Button>
 
         </div>
       </div>
