@@ -16,8 +16,11 @@ export function IntroductionSection(props: introProps) {
 
         <h1> Hi, I'm <span className="blue">Jackson</span>.</h1>
         <h2> I'm a programmer and Teacher </h2>
+        <div className="button-container">
+
         <Button onClick={() => onClickAboutMe()}variant="primary" >About Me and Projects</Button>
 
+        </div>
       </div>
     </div>
   )
