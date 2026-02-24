@@ -10,6 +10,7 @@ import { GameSection } from './sections/gameSection'
 function App() {
   const [userLanguage, setUserLanguage] = useState<'en' | 'jp'>('en');
   const targetRef = useRef(null);
+  const gameTargetRef = useRef(null);
 
   return (
     <>
@@ -22,9 +23,9 @@ function App() {
       getLanguage: userLanguage,
     }}>
 
-        <IntroductionSection targetRef={targetRef}/>
+        <IntroductionSection targetRef={targetRef} gameTargetRef={gameTargetRef}/>
         <AboutSection targetRef={targetRef}/>
-        <GameSection />
+        <GameSection targetRef={gameTargetRef}/>
         {/* next section is current project, show wireframe and database schema from book app */}
 
     </LanguageContext.Provider>

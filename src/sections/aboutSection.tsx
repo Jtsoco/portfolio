@@ -2,6 +2,8 @@ import '../stylesheet.css';
 import { TechStack } from "../components/techStack"
 import { useContext } from "react"
 import { LanguageContext } from "../contexts/languageContext"
+import Image from 'react-bootstrap/Image';
+
 
 
 interface aboutProps {
@@ -18,7 +20,7 @@ export function AboutSection(props: aboutProps) {
         <div className="section-title">About</div>
         <div className="about-section-content">
           <div className="about-me">
-            <div className="placeholder-image">This is a placeholder image</div>
+            <Image src="public/images/jtsoco.jpg" roundedCircle className="about-image" alt="Picture of Jackson Soco" />
             <div className="about-text">
               <p>
                 {aboutText}

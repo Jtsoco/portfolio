@@ -8,7 +8,11 @@ import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { GameControlsComponent } from '../contexts/gameControlsComponent';
 
-export function GameSection() {
+
+interface gameProps {
+  targetRef: React.RefObject<null>;
+}
+export function GameSection(props: gameProps) {
 
   // create a button to load and unload game, when loaded show iframe
   // when loaded swap for unload
@@ -25,7 +29,7 @@ export function GameSection() {
 
   if (isGameLoaded) {
   return (
-    <div className='section-page section-column'>
+    <div className='section-page section-column' ref={props.targetRef}>
       <div className="flex-row space-between center-items full-width mb-16">
       <ButtonGroup>
 
@@ -62,7 +66,7 @@ export function GameSection() {
   )
 } else {
   return (
-    <div className='section-page section-column section-bg'>
+    <div className='section-page section-column section-bg' ref={props.targetRef}>
       <div className="flex-row space-between center-items full-width mb-16">
       <ButtonGroup>
 
