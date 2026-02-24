@@ -20,7 +20,7 @@ export function AboutSection(props: aboutProps) {
         <div className="section-title">About</div>
         <div className="about-section-content">
           <div className="about-me">
-            <Image src="public/images/jtsoco.jpg" roundedCircle className="about-image" alt="Picture of Jackson Soco" />
+            <Image src="images/jtsoco.jpg" roundedCircle className="about-image" alt="Picture of Jackson Soco" />
             <div className="about-text">
               <p>
                 {aboutText}
