@@ -15,7 +15,7 @@
 }
 
 .section-page {
-  height: 100vh;
+  min-height: 100vh;
   scroll-snap-align: start;
   display: flex;
   justify-content: center;
@@ -45,6 +45,15 @@
 
 }
 
+.tech-stack-icon {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  border-color: grey;
+  border-radius: 12px;
+  border: 2px solid grey;
+  border-image: linear-gradient(to left top, grey, #E5E7EB) 1;
+}
 .tech-stack-container img {
   width: 96px;
   height: 96px;
@@ -233,4 +242,26 @@
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 1rem;
+}
+
+.current-project-image {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.project-techstack-images {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.backend-info {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 1.5rem;
+  padding: 1rem;
 }

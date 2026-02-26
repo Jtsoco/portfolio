@@ -2,6 +2,7 @@ import '../stylesheet.css';
 interface introProps {
   targetRef: React.RefObject<null | HTMLElement>;
   gameTargetRef: React.RefObject<null | HTMLElement>;
+  currentProjectTargetRef: React.RefObject<null | HTMLElement>;
 };
 
 import Button from 'react-bootstrap/Button';
@@ -22,7 +23,8 @@ export function IntroductionSection(props: introProps) {
 
         <Button onClick={() => scrollToSection(props.targetRef)}variant="primary" >About Me and Projects</Button>
         <Button onClick={() => scrollToSection(props.gameTargetRef)} >Play My Game</Button>
-        <Button href="https://github.com/Jtsoco">Github</Button>
+        <Button onClick={() => scrollToSection(props.currentProjectTargetRef)} >Current Project</Button>
+        {/* <Button href="https://github.com/Jtsoco">Github</Button> */}
 
         </div>
       </div>
