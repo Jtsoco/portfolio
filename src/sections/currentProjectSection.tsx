@@ -5,9 +5,8 @@ import '../stylesheet.css';
 // import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Carousel from 'react-bootstrap/Carousel';
 import { currentProjectInfo } from '../assets/carouselItemInfo/currentProjectInfo';
-
+import Button from 'react-bootstrap/Button';
 
 export function CurrentProjectSection(props: currentProjectProps) {
   const projectInfo = currentProjectInfo();
@@ -17,7 +16,16 @@ export function CurrentProjectSection(props: currentProjectProps) {
       <div className='backend-info'>
         <div className ="section-header">
           <h2 className="section-title">Current Project</h2>
-          <h3>Rag Book Recommendation App</h3>
+          <h3 className="current-project-name">Rag Book Recommendation App
+            <a href="https://github.com/Jtsoco/rag-book-app">
+              <div>
+                <Button className="github-button" >
+                <Image src={'/portfolio/src/assets/icons8-github-50.png'} alt="GitHub Repository" className="github-icon"/>
+                  Github
+                  </Button>
+              </div>
+            </a>
+          </h3>
 
         <div className='project-techstack-images'>
           {
