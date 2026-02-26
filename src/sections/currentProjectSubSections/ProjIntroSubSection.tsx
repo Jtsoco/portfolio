@@ -10,7 +10,7 @@ export function ProjIntroSubSection(props: ProjectInfoInterface){
     flow: props.flow
   }
   return (
-            <div className ="section-header">
+            <div className ="section-header current-project-header">
           <h2 className="section-title">Current Project</h2>
           <h3 className="current-project-name">Rag Book Recommendation App
             <a href="https://github.com/Jtsoco/rag-book-app">
