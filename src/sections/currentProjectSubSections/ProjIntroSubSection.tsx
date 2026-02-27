@@ -22,6 +22,9 @@ export function ProjIntroSubSection(props: ProjectInfoInterface){
               </div>
             </a>
           </h3>
+          <div className="current-project-description">
+            <p>{projectInfo.description}</p>
+          </div>
 
         <div className='project-techstack-images'>
           {

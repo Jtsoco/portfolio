@@ -24,7 +24,7 @@ export function currentProjectInfo() {
       flow: 'current_project/chatbot_flow.png',
       architecture: 'current_project/architecture.png',
       name: 'Rag Book Recommendation App',
-      description: 'A book recommendation app that uses a retrieval augmented generation (RAG) approach to provide personalized book recommendations based on user preferences and a knowledge base of books.',
+      description: "An app for book lover's to rate books and receive Retrieval Augmented Generation (RAG) recommendations based on their preferences.",
       imageSections: [
         {
           className: 'architecture',

@@ -316,3 +316,14 @@
   justify-content: start;
   min-height: 100vh;
 }
+
+
+.current-project-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  max-width: 400px;
+  font-size: 0.8rem;
+}
