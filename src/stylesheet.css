@@ -327,3 +327,21 @@
   max-width: 400px;
   font-size: 0.8rem;
 }
+
+.navbar-button {
+  display: inline-block !important;        /* not flex */
+  /* padding: 0.25rem 0.75rem !important;     bootstrap‑style */
+  /* min-width: 80px !important;              optional equal‑width baseline */
+  text-align: center !important;
+  white-space: nowrap !important;
+  width: 80px !important;
+}
+
+.navbar-buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  margin-right: auto;
+
+}

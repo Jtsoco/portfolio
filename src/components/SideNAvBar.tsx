@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Offcanvas, Nav } from 'react-bootstrap';
+import { Offcanvas, Nav, Button } from 'react-bootstrap';
 
 export interface NavigationItem {
   label: string;
@@ -50,13 +50,17 @@ export function SideNavBar(props: SideNavBarProps) {
           <Offcanvas.Title>Navigation</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          <Nav className="flex-column">
+          <h2>Current Project</h2>
+          <div className="navbar-buttons-container">
             {Object.entries(props.useLinkRefs).map(([id, ref]) => (
-              <Nav.Link key={id} onClick={() => scrollToSection(ref)}>
+              <Button className="navbar-button w-auto" size='sm' variant="primary" key={id} onClick={() => scrollToSection(ref)}>
                 {id}
-              </Nav.Link>
+              </Button>
+              // <Nav.Link key={id} onClick={() => scrollToSection(ref)}>
+              //   {id}
+              // </Nav.Link>
             ))}
-          </Nav>
+          </div>
         </Offcanvas.Body>
       </Offcanvas>
 

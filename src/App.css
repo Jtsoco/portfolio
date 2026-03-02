@@ -47,3 +47,19 @@
   gap: 1rem;
   justify-content: center;
 }
+
+
+.offcanvas {
+  background: none !important; /* Remove default background */
+  border: none !important; /* Remove default border */
+  width:auto !important; /* Adjust width as needed */
+}
+
+.offcanvas-header {
+  display: none !important;;
+}
+
+.offcanvas.Body {
+  background-color: rgba(255, 255, 255, 0.8) !important; /* Semi-transparent white background */
+  backdrop-filter: blur(10px) !important; /* Add a subtle blur effect */
+}
