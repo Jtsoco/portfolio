@@ -16,6 +16,35 @@ export interface CurrentProjectRefInterface {
   targetRef: React.RefObject<HTMLDivElement>;
 }
 
+export interface ApiItem {
+  method: string;
+  path: string;
+  description: string;
+}
+
+export function getApiItems(): ApiItem[] {
+  return [
+    {
+      method: 'GET', path: `/api/book/works/<pk>/`, description: 'Retrieves a book work by its primary key (pk).'
+    },
+    {
+      method: 'GET', path: `/api/book/authors/<pk>/`, description: 'Retrieves an author by their primary key (pk).'
+    },
+    {
+      method: 'GET', path: `/api/search/?q=&page=&limit=`, description: 'Searches for books and authors based on a query string (q) and supports pagination with page and limit parameters.'
+    },
+    {
+      method: 'POST', path: `/api/chatbot/single-message/`, description: 'Sends a single message to the chatbot and receives a response.'
+    },
+    {
+      method: 'POST', path: `/api/dj-rest-auth/` , description: 'Endpoint for user authentication using Django REST Framework, varies with login, logout, password, etc'
+    },
+    {
+      method: 'POST', path: `/api/dj-rest-auth/registration/`, description: 'Endpoint for user registration using Django REST Framework, allows new users to create an account by providing necessary information such as username, email, and password.'
+    }
+  ]
+}
+
 export function currentProjectInfo() {
   return (
 

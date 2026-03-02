@@ -7,6 +7,7 @@ export function useLinkRefs() {
   currentProjectInfo().imageSections.forEach((section) => {
     refs.push(section.id);
   });
+  refs.push('api-overview');
 
   type SectionRefs = Record<string, React.RefObject<HTMLDivElement | null>>;
 

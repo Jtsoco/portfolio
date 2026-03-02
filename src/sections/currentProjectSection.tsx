@@ -11,6 +11,7 @@ import Button from 'react-bootstrap/Button';
 import { ProjIntroSubSection } from './currentProjectSubSections/ProjIntroSubSection';
 import { ImageSubSection } from './currentProjectSubSections/ImageSubSection';
 
+import { ApiSubSection } from './currentProjectSubSections/ApiSubSection';
 export function CurrentProjectSection(props: currentProjectProps) {
   const projectInfo = currentProjectInfo();
   return (
@@ -26,6 +27,7 @@ export function CurrentProjectSection(props: currentProjectProps) {
               </div>
             ))
           }
+          <ApiSubSection targetRef={props.subSectionRefs['api-overview']} />
         </div>
 
 
