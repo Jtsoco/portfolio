@@ -345,3 +345,24 @@
   margin-right: auto;
 
 }
+
+.section-select-dropdown {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1000;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+.fade-in.hidden {
+  opacity: 0;
+
+}

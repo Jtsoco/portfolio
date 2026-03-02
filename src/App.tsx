@@ -1,4 +1,4 @@
-import { useState, useRef} from 'react'
+import React, { useState, useRef} from 'react'
 
 import './App.css'
 import { IntroductionSection } from './sections/IntroductionSection'
@@ -9,6 +9,9 @@ import { GameSection } from './sections/gameSection'
 import { CurrentProjectSection } from './sections/currentProjectSection'
 import { SideNavBar } from './components/SideNAvBar'
 import { useLinkRefs } from './sections/currentProjectSubSections/useLinkRefs'
+import { SectionSelectDropdown } from './components/SectionSelectDropdown'
+
+
 
 function App() {
   const [userLanguage, setUserLanguage] = useState<'en' | 'jp'>('en');
@@ -16,6 +19,13 @@ function App() {
   const gameTargetRef = useRef(null);
   const currentProjectTargetRef = useRef(null);
   const currentProjectSubSectionRefs = useLinkRefs();
+  const nonTopRef = useRef(null);
+  const dropDownLinkRefs: Record<string, React.RefObject<HTMLDivElement | null>> = {
+    'Introduction': targetRef,
+    'About': targetRef,
+    'Game': gameTargetRef,
+    'Current Project': currentProjectTargetRef,
+  }
 
   return (
     <>
@@ -28,11 +38,16 @@ function App() {
       getLanguage: userLanguage,
     }}>
         <SideNavBar useLinkRefs={currentProjectSubSectionRefs} sectionRef={currentProjectTargetRef}></SideNavBar>
+        <SectionSelectDropdown useLinkRefs={dropDownLinkRefs} nonTopRef={nonTopRef} ></SectionSelectDropdown>
         <IntroductionSection targetRef={targetRef} gameTargetRef={gameTargetRef} currentProjectTargetRef={currentProjectTargetRef}/>
-        <AboutSection targetRef={targetRef}/>
-        <GameSection targetRef={gameTargetRef}/>
-        <CurrentProjectSection targetRef={currentProjectTargetRef} subSectionRefs={currentProjectSubSectionRefs}/>
-        {/* next section is current project, show wireframe and database schema from book app */}
+
+        <div ref={nonTopRef}>
+
+          <AboutSection targetRef={targetRef}/>
+          <GameSection targetRef={gameTargetRef}/>
+          <CurrentProjectSection targetRef={currentProjectTargetRef} subSectionRefs={currentProjectSubSectionRefs}/>
+          {/* next section is current project, show wireframe and database schema from book app */}
+        </div>
 
     </LanguageContext.Provider>
       </div>
