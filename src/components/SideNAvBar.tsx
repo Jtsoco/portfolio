@@ -50,7 +50,7 @@ export function SideNavBar(props: SideNavBarProps) {
           <Offcanvas.Title>Navigation</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          <h2>Current Project</h2>
+          <h3>Current Project</h3>
           <div className="navbar-buttons-container">
             {Object.entries(props.useLinkRefs).map(([id, ref]) => (
               <Button className="navbar-button w-auto" size='sm' variant="primary" key={id} onClick={() => scrollToSection(ref)}>
