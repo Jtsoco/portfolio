@@ -11,6 +11,11 @@ export interface ImageSubSectionInfoInterface {
   alt: string;
   title: string;
 }
+export interface CurrentProjectRefInterface {
+  id: string;
+  targetRef: React.RefObject<HTMLDivElement>;
+}
+
 export function currentProjectInfo() {
   return (
 
@@ -30,19 +35,22 @@ export function currentProjectInfo() {
           className: 'architecture',
           src: 'current_project/architecture.png',
           alt: 'Architecture Diagram',
-          title: 'Architecture Diagram'
+          title: 'Architecture Diagram',
+          id: 'architecture'
         },
         {
           className: 'project-flow',
           src: 'current_project/chatbot_flow.png',
           alt: 'Project Flow Diagram',
-          title: 'Project Flow Diagram'
+          title: 'Project Flow Diagram',
+          id: 'project-flow'
         },
         {
           className: 'project-database',
           src: 'current_project/database_schema.png',
           alt: 'Database Schema',
-          title: 'Database Schema'
+          title: 'Database Schema',
+          id: 'database-schema'
         }
 
       ]

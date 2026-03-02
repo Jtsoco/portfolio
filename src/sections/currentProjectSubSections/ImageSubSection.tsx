@@ -4,6 +4,7 @@ export interface ImageSubSectionProps {
   src: string;
   alt: string;
   title: string;
+  id: string;
 
 }
 
@@ -11,7 +12,7 @@ export function ImageSubSection(props: ImageSubSectionProps) {
 
   return (
 
-        <div className="image-subsection">
+        <div className="image-subsection" id={props.id}>
           <h3>{props.title}</h3>
           <Image src={props.src} alt={props.alt} className={props.className + " current-project-image"} />
         </div>
