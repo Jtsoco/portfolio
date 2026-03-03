@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Offcanvas, Nav, Button } from 'react-bootstrap';
+import { useLayoutEffect } from 'react';
 
 export interface NavigationItem {
   label: string;
@@ -15,12 +16,16 @@ export interface SideNavBarProps {
 }
 export function SideNavBar(props: SideNavBarProps) {
   const [show, setShow] = useState(false);
+  const [collapsed, setCollapsed] = useState(false);
 
   useEffect(() => {
     const obs = new IntersectionObserver(([entry]) => {
       // at threshold 0.1, the section is considered visible if at least 10% of it is in the viewport
       // set show is set to whether it is intersecting or not
       setShow(entry.isIntersecting);
+      if (entry.isIntersecting) {
+        setCollapsed(false);
+      }
     }, { threshold: 0.1 });
 
     const section = props.sectionRef.current;
@@ -43,15 +48,44 @@ export function SideNavBar(props: SideNavBarProps) {
     }
   };
 
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const headerRef = useRef<HTMLHeadingElement | null>(null);
+
+  const collapseNonEssentialElements = () => {
+    if (containerRef.current && headerRef.current) {
+      if (collapsed) {
+        containerRef.current.classList.remove('offcanvas-hide')
+        containerRef.current.classList.add('offcanvas-show');
+        headerRef.current.classList.add('offcanvas-show');
+        headerRef.current.classList.remove('offcanvas-hide');
+
+      }
+      else {
+        containerRef.current.classList.add('offcanvas-hide')
+        containerRef.current.classList.remove('offcanvas-show');
+        headerRef.current.classList.remove('offcanvas-show');
+        headerRef.current.classList.add('offcanvas-hide');
+
+      }
+      console.log('toggled')
+    }
+    setCollapsed(!collapsed);
+  }
+
+  const toggleRef = useRef<HTMLButtonElement | null>(null);
+
   return (
     <div className="side-nav-bar" >
       <Offcanvas show={show} onHide={() => setShow(false)} placement="start" scroll={true} backdrop={false}>
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Navigation</Offcanvas.Title>
-        </Offcanvas.Header>
+
+
         <Offcanvas.Body>
-          <h3>Current Project</h3>
-          <div className="navbar-buttons-container">
+          <div className="nav-header-container">
+
+           <Button ref={toggleRef} className="side-nav-toggle" variant="outline-info" size='sm' onClick={collapseNonEssentialElements}>{collapsed ? '->' : '<-'}</Button>
+          <h5 ref={headerRef}>Current Project</h5>
+          </div>
+          <div className="navbar-buttons-container" ref={containerRef}>
             {Object.entries(props.useLinkRefs).map(([id, ref]) => (
               <Button className="navbar-button w-auto" size='sm' variant="primary" key={id} onClick={() => scrollToSection(ref)}>
                 {id}

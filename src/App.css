@@ -56,10 +56,31 @@
 }
 
 .offcanvas-header {
-  display: none !important;;
+  /* display: none !important;; */
 }
 
 .offcanvas.Body {
   background-color: rgba(255, 255, 255, 0.8) !important; /* Semi-transparent white background */
   backdrop-filter: blur(10px) !important; /* Add a subtle blur effect */
+}
+
+.offcanvas-hide {
+  transform: translateX(-140%) !important; /* Move the offcanvas completely out of view */
+  transition: transform 0.3s ease-in-out !important;
+}
+
+.offcanvas-show {
+  transform: translateX(0) !important; /* Move the offcanvas into view */
+  transition: transform 0.3s ease-in-out !important;
+}
+
+.nav-header-container {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+
+}
+
+.nav-header-container h5 {
+  margin: 0;
 }
