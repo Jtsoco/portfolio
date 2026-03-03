@@ -27,7 +27,7 @@ export function ApiSubSection(props: ApiOveriewProps) {
           {
             apiItems.map((item, index) => (
               <Col key={index}>
-                <Card className="api-card">
+                <Card className="api-card p-4">
                     <Card.Body>
                           <Badge bg={methodColor(item.method)} className="me-2">
                             {item.method}

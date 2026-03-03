@@ -306,7 +306,10 @@
   gap: 0.5rem;
   justify-content: center;
   min-height: 100vh;
+
 }
+
+
 
 .current-project-header {
   display: flex;
@@ -385,19 +388,21 @@
   display: flex;
   flex-direction: column;
   /* align-items: center; */
+  justify-content: start;
   /* gap: 1rem; */
   padding: 1rem;
 }
 
 .api-card-section {
 
-  margin-right: 200px;
-  margin-left: 200px;
+  margin-right: 140px;
+  margin-left: 140px;
 }
 
 .api-header {
-  font-size: 2rem;
-  font-weight: 600;
+  /* font-size: 2rem; */
+  /* font-weight: 600; */
   margin-bottom: 2rem;
   color:black;
+  margin-top: 1rem;
 }
