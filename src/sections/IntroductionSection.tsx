@@ -3,6 +3,7 @@ interface introProps {
   targetRef: React.RefObject<null | HTMLElement>;
   gameTargetRef: React.RefObject<null | HTMLElement>;
   currentProjectTargetRef: React.RefObject<null | HTMLElement>;
+  introductionRef: React.RefObject<null | HTMLDivElement>;
 };
 
 import Button from 'react-bootstrap/Button';
@@ -14,11 +15,11 @@ export function IntroductionSection(props: introProps) {
     }
   }
   return (
-    <div className="section-page">
+    <div className="section-page" ref={props.introductionRef}>
       <div>
 
         <h1> Hi, I'm <span className="blue">Jackson</span>.</h1>
-        <h2> I'm a programmer and Teacher </h2>
+        <h2> I'm a Programmer and a Teacher </h2>
         <div className="button-container">
 
         <Button onClick={() => scrollToSection(props.targetRef)}variant="primary" >About Me and Projects</Button>
