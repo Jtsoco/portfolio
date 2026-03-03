@@ -15,7 +15,7 @@
 }
 
 .section-page {
-  height: 100vh;
+  min-height: 100vh;
   scroll-snap-align: start;
   display: flex;
   justify-content: center;
@@ -35,6 +35,13 @@
   padding: 1rem;
 }
 
+.section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
 
 
 .tech-stack-container {
@@ -45,6 +52,15 @@
 
 }
 
+.tech-stack-icon {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  border-color: grey;
+  border-radius: 12px;
+  border: 2px solid grey;
+  border-image: linear-gradient(to left top, grey, #E5E7EB) 1;
+}
 .tech-stack-container img {
   width: 96px;
   height: 96px;
@@ -233,4 +249,174 @@
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 1rem;
+}
+
+.current-project-image {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.project-techstack-images {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.backend-info {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.github-icon {
+  width: 24px;
+  height: 24px;
+  /* margin-left: 8px; */
+  /* margin-right: 2px; */
+}
+
+.github-button {
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px;
+  height: 32px;
+
+  justify-content: space-between;
+  padding: 2px 4px 2px 4px !important;
+}
+.current-project-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.image-subsection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  min-height: 100vh;
+
+}
+
+
+
+.current-project-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: start;
+  min-height: 100vh;
+}
+
+
+.current-project-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  max-width: 400px;
+  font-size: 0.8rem;
+}
+
+.navbar-button {
+  display: inline-block !important;        /* not flex */
+  /* padding: 0.25rem 0.75rem !important;     bootstrap‑style */
+  /* min-width: 80px !important;              optional equal‑width baseline */
+  text-align: center !important;
+  white-space: nowrap !important;
+  width: 80px !important;
+}
+
+.navbar-buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  margin-right: auto;
+
+}
+
+.section-select-dropdown {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1000;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+.fade-in.hidden {
+  opacity: 0;
+
+}
+
+
+.align-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.api-overview-section {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: start;
+  /* gap: 1rem; */
+  padding: 1rem;
+}
+
+.api-card-section {
+
+  margin-right: 140px;
+  margin-left: 140px;
+}
+
+.api-header {
+  /* font-size: 2rem; */
+  /* font-weight: 600; */
+  margin-bottom: 2rem;
+  color:black;
+  margin-top: 1rem;
+}
+
+.roadmap-text {
+  padding-right: 4px;
+}
+
+.roadmap-section {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: start;
+  /* gap: 1rem; */
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
