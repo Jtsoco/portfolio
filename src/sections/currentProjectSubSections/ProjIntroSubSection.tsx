@@ -16,7 +16,7 @@ export function ProjIntroSubSection(props: ProjectInfoInterface){
             <a target="_blank" href="https://github.com/Jtsoco/rag-book-app">
               <div>
                 <Button className="github-button" >
-                <Image src={'/portfolio/src/assets/icons8-github-50.png'} alt="GitHub Repository" className="github-icon"/>
+                <Image src={'current_project/techstack/icons8-github-50.png'} alt="GitHub Repository" className="github-icon"/>
                   Github
                   </Button>
               </div>
@@ -29,7 +29,7 @@ export function ProjIntroSubSection(props: ProjectInfoInterface){
         <div className='project-techstack-images'>
           {
             projectInfo.techstack.map((image: string, index: number) => (
-              <Image key={index} src={"/portfolio/src/assets/" + image} alt={`Tech stack image ${index}`} className="tech-stack-icon" />
+              <Image key={index} src={"current_project/techstack/" + image} alt={`Tech stack image ${index}`} className="tech-stack-icon" />
             ))
           }
         </div>

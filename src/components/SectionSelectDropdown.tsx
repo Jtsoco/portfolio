@@ -1,4 +1,4 @@
-import { Button, Dropdown } from 'react-bootstrap';
+import { Dropdown } from 'react-bootstrap';
 import { useEffect, useState } from 'react';
 import React from 'react';
 export interface SectionSelectDropdownProps {

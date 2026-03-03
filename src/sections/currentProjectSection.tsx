@@ -4,10 +4,8 @@ interface currentProjectProps {
 }
 import '../stylesheet.css';
 // import Button from 'react-bootstrap/Button';
-import Image from 'react-bootstrap/Image';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { currentProjectInfo } from '../assets/carouselItemInfo/currentProjectInfo';
-import Button from 'react-bootstrap/Button';
 import { ProjIntroSubSection } from './currentProjectSubSections/ProjIntroSubSection';
 import { ImageSubSection } from './currentProjectSubSections/ImageSubSection';
 import { RoadmapSubSection } from './currentProjectSubSections/RoadmapSubSection';
