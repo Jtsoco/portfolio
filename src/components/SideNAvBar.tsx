@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Offcanvas, Nav, Button } from 'react-bootstrap';
-import { useLayoutEffect } from 'react';
+import { Offcanvas, Button } from 'react-bootstrap';
 
 export interface NavigationItem {
   label: string;
@@ -86,6 +85,9 @@ export function SideNavBar(props: SideNavBarProps) {
           <h5 ref={headerRef}>Current Project</h5>
           </div>
           <div className="navbar-buttons-container" ref={containerRef}>
+            <Button className="navbar-button w-auto" size='sm' variant="primary" onClick={() => scrollToSection(props.sectionRef)}>
+              Overview
+            </Button>
             {Object.entries(props.useLinkRefs).map(([id, ref]) => (
               <Button className="navbar-button w-auto" size='sm' variant="primary" key={id} onClick={() => scrollToSection(ref)}>
                 {id}
