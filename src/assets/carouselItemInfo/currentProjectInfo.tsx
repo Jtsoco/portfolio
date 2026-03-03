@@ -44,7 +44,30 @@ export function getApiItems(): ApiItem[] {
     }
   ]
 }
-
+interface RoadmapItem {
+  label: string;
+  status: 'completed' | 'in-progress' | 'planned';
+}
+export function getRoadmapItems(): RoadmapItem[] {
+  return [
+    {
+      label: 'Design Database Schema', status: 'completed'
+    },
+    { label: "Implement Django Models", status: 'completed' },
+    { label: 'Set Up REST API basics with Django REST Framework', status: 'completed' },
+    { label: 'Implement Open Library Search if book or author not found in database', status: 'completed' },
+    { label: 'Implement batch search for books with Open Library API', status: 'completed' },
+    {
+      label: 'Implement User Authentication with JSON Web Tokens', status: 'completed'
+    },
+    { label: 'View that relays user queries to OpenAI API', status: 'completed' },
+    { label: 'V0.1 User Data added to Chatbot Query', status: 'completed' },
+    { label: 'V0.2 Similar User Data added to Chatbot Query', status: 'in-progress' },
+    { label: 'V0.3 pgvector Integration for RAG Recommendation utilizing vector database', status: 'planned' },
+    { label: 'V0.4 Full Open Library data dump version utilizing vector database', status: 'planned' },
+    {label: 'React Frontend with React-Bootstrap', status: 'planned'}
+  ]
+}
 export function currentProjectInfo() {
   return (
 

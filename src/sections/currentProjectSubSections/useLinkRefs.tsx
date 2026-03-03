@@ -8,6 +8,7 @@ export function useLinkRefs() {
     refs.push(section.id);
   });
   refs.push('api-overview');
+  refs.push('roadmap');
 
   type SectionRefs = Record<string, React.RefObject<HTMLDivElement | null>>;
 

@@ -10,6 +10,7 @@ import { currentProjectInfo } from '../assets/carouselItemInfo/currentProjectInf
 import Button from 'react-bootstrap/Button';
 import { ProjIntroSubSection } from './currentProjectSubSections/ProjIntroSubSection';
 import { ImageSubSection } from './currentProjectSubSections/ImageSubSection';
+import { RoadmapSubSection } from './currentProjectSubSections/RoadmapSubSection';
 
 import { ApiSubSection } from './currentProjectSubSections/ApiSubSection';
 export function CurrentProjectSection(props: currentProjectProps) {
@@ -28,6 +29,7 @@ export function CurrentProjectSection(props: currentProjectProps) {
             ))
           }
           <ApiSubSection targetRef={props.subSectionRefs['api-overview']} />
+          <RoadmapSubSection targetRef={props.subSectionRefs['roadmap']} />
         </div>
 
 

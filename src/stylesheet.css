@@ -406,3 +406,17 @@
   color:black;
   margin-top: 1rem;
 }
+
+.roadmap-text {
+  padding-right: 4px;
+}
+
+.roadmap-section {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: start;
+  /* gap: 1rem; */
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
