@@ -73,10 +73,13 @@ export function currentProjectInfo() {
 
     {
       techstack: [
-        'icons8-django-96.png',
-        'icons8-git-96.png',
+        'techstack/icons8-django-96.png',
+        'techstack/icons8-git-96.png',
         // 'icons8-postgresql-96.png',
-        'icons8-python.svg',
+        'techstack/icons8-python.svg',
+        'icons8-chatgpt-100.png',
+        'icons8-postgresql-96.png',
+        'icons8-visual-studio-code-96.png',
       ],
       flow: 'current_project/chatbot_flow.png',
       architecture: 'current_project/architecture.png',

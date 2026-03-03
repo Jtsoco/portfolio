@@ -29,7 +29,7 @@ export function ProjIntroSubSection(props: ProjectInfoInterface){
         <div className='project-techstack-images'>
           {
             projectInfo.techstack.map((image: string, index: number) => (
-              <Image key={index} src={"/portfolio/src/assets/techstack/" + image} alt={`Tech stack image ${index}`} className="tech-stack-icon" />
+              <Image key={index} src={"/portfolio/src/assets/" + image} alt={`Tech stack image ${index}`} className="tech-stack-icon" />
             ))
           }
         </div>
