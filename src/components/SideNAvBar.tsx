@@ -75,7 +75,7 @@ export function SideNavBar(props: SideNavBarProps) {
 
   return (
     <div className="side-nav-bar" >
-      <Offcanvas show={show} onHide={() => setShow(false)} placement="start" scroll={true} backdrop={false}>
+      <Offcanvas show={show} onHide={() => setShow(false)} placement="start" scroll={true} backdrop={false} restoreFocus={false} enforceFocus={false}>
 
 
         <Offcanvas.Body>
