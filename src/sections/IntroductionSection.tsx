@@ -13,6 +13,7 @@ export function IntroductionSection(props: introProps) {
   const scrollToSection = (ref: React.RefObject<null | HTMLElement>) => {
     if (ref && ref.current) {
       ref.current.scrollIntoView({ behavior: 'smooth' });
+
     }
   }
   return (

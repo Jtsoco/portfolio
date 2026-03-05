@@ -11,6 +11,7 @@ export function SectionSelectDropdown(props: SectionSelectDropdownProps) {
   const scrollToSection = (ref: React.RefObject<HTMLDivElement | null>) => {
     if (ref.current) {
       ref.current.scrollIntoView({ behavior: 'smooth' });
+
     }
   };
   const [show, setShow] = useState(false);
