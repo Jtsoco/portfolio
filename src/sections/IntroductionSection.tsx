@@ -6,6 +6,7 @@ interface introProps {
   introductionRef: React.RefObject<null | HTMLDivElement>;
 };
 
+import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 export function IntroductionSection(props: introProps) {
 
@@ -25,8 +26,12 @@ export function IntroductionSection(props: introProps) {
         <Button onClick={() => scrollToSection(props.targetRef)}variant="primary" >About Me and Projects</Button>
         <Button onClick={() => scrollToSection(props.gameTargetRef)} >Play My Game</Button>
         <Button onClick={() => scrollToSection(props.currentProjectTargetRef)} >Current Project</Button>
-        {/* <Button href="https://github.com/Jtsoco">Github</Button> */}
-
+        <a target="_blank" href="https://github.com/Jtsoco/">
+          <Button >
+            <Image src={'current_project/techstack/icons8-github-50.png'} alt="GitHub Repository" className="github-icon"/>
+              Github
+          </Button>
+        </a>
         </div>
       </div>
     </div>
