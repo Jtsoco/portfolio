@@ -20,8 +20,9 @@ function App() {
   const currentProjectTargetRef = useRef(null);
   const currentProjectSubSectionRefs = useLinkRefs();
   const nonTopRef = useRef(null);
+  const introductionRef = useRef(null);
   const dropDownLinkRefs: Record<string, React.RefObject<HTMLDivElement | null>> = {
-    'Introduction': targetRef,
+    'Introduction': introductionRef,
     'About': targetRef,
     'Game': gameTargetRef,
     'Current Project': currentProjectTargetRef,
@@ -39,7 +40,7 @@ function App() {
     }}>
         <SideNavBar useLinkRefs={currentProjectSubSectionRefs} sectionRef={currentProjectTargetRef}></SideNavBar>
         <SectionSelectDropdown useLinkRefs={dropDownLinkRefs} nonTopRef={nonTopRef} ></SectionSelectDropdown>
-        <IntroductionSection targetRef={targetRef} gameTargetRef={gameTargetRef} currentProjectTargetRef={currentProjectTargetRef}/>
+        <IntroductionSection targetRef={targetRef} gameTargetRef={gameTargetRef} currentProjectTargetRef={currentProjectTargetRef} introductionRef={introductionRef}/>
 
         <div ref={nonTopRef}>
 
