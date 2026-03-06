@@ -73,5 +73,36 @@ launchPyxel({ command: "play", name: "dungeon_explorer.pyxapp", gamepad: "enable
 </script>
 
 <!-- …the rest of your page… -->
+<script>
+(function() {
+  // log whatever _addVirtualGamepad does
+  const origAdd = window._addVirtualGamepad;
+  window._addVirtualGamepad = function(mode) {
+    console.log('_addVirtualGamepad called with', mode);
+    const ret = origAdd(mode);
+    // once the images exist, watch the touch handler
+    const cross = document.querySelector('img[src$="gamepad_cross_98x98.png"]');
+    const button = document.querySelector('img[src$="gamepad_button_98x98.png"]');
+    if (cross && button) {
+      console.log('virtual‑gamepad images', cross, button);
+    }
+    return ret;
+  };
+
+  // instrument the touch handler by re‑registering our own
+  document.addEventListener('touchstart', logTouch, {passive:false});
+  document.addEventListener('touchmove',  logTouch, {passive:false});
+  document.addEventListener('touchend',   logTouch, {passive:false});
+
+  function logTouch(e) {
+    console.log('touch', e.type, 'points:', Array.from(e.changedTouches).map(t => [t.clientX, t.clientY]));
+    // you can compute rects here yourself and print the angle/sector
+    const cRect = cross ? cross.getBoundingClientRect() : {left:0,top:0};
+    const x = e.changedTouches[0].clientX - cRect.left;
+    const y = e.changedTouches[0].clientY - cRect.top;
+    console.log('relative', x, y);
+  }
+})();
+</script>
 
 </body>
