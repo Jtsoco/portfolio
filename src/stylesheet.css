@@ -274,6 +274,7 @@
   /* align-items: center; */
   gap: 1.5rem;
   padding: 1rem;
+  align-items: center;
 }
 
 .github-icon {
@@ -498,12 +499,41 @@
   }
 
   .current-project-description {
-    max-width: 90vw;
+    max-width: 80vw;
+    padding: 0 1rem;
+  }
+  .current-project-header {
+    max-width: 80vw;
+    align-items: center;
+    justify-content: center;
   }
 
   .project-techstack-images {
     flex-wrap: wrap
   }
+
+  .navbar-buttons-container {
+    padding: 4px 0px;
+    gap: 8px;
+    /* flex-direction: row; */
+  }
+
+  .offcanvas-body {
+    padding: 2px !important;
+  }
+
+  /* .canvas-body-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+  } */
+   .current-project-name {
+    flex-direction: column;
+    gap: 4px;
+
+
 }
 
 /* tablet */
