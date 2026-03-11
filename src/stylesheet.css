@@ -14,6 +14,12 @@
   color: #E5E7EB;
 }
 
+.button-container {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
 .section-page {
   min-height: 100vh;
   display: flex;
@@ -428,6 +434,7 @@
 /* mobile */
 @media (max-width: 767px) {
   /* about section */
+
   .about-section-content {
     flex-direction: column;
     align-items: center;
@@ -533,7 +540,7 @@
     flex-direction: column;
     gap: 4px;
 
-
+   }
 }
 
 /* tablet */
