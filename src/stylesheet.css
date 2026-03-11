@@ -491,11 +491,25 @@
 
 
   /* current project section */
+  .api-card-section {
+    margin: 0 1rem
+  }
 
+  .current-project-description {
+    max-width: 90vw;
+  }
+
+  .project-techstack-images {
+    flex-wrap: wrap
+  }
 }
 
 /* tablet */
 @media(min-width: 768px) and (max-width: 1023px) {
+
+  .api-card-section {
+    margin: 0 2rem
+  }
 
   .game-controls {
     display: none;
