@@ -175,7 +175,7 @@
 }
 
 .carousel-inner {
-  height: 675 !important;
+  height: 675px !important;
 }
 .carousel-inner-caption h3 {
   border-bottom: 2px solid grey;
@@ -453,8 +453,17 @@
     max-width: 500px;
   }
 
-  .game {
+  .carousel {
+    height: auto !important;
     width: 100%;
+  }
+
+  .carousel-inner {
+    height: auto !important;
+  }
+
+  .game {
+    width: 95%;
     height: auto;
     aspect-ratio: 1 / 1;
     max-width: 500px;
@@ -466,13 +475,22 @@
 
   .carousel-indicators {
     /* top: 400px !important; */
-    height: auto !important;
-    position: unset !important;
+    /* height: auto !important; */
+    position: relative !important;
+    top: auto !important;
 
   }
   .game-controls {
     display: none;
   }
+
+  .carousel-inner-caption {
+    height: auto;
+    min-height: 100px;
+  }
+
+
+  /* current project section */
 
 }
 
