@@ -419,3 +419,30 @@
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
+
+/* mobile */
+@media (max-width: 767px) {
+  .about-section-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-text {
+    max-width: 100%;
+    min-width: unset;
+  }
+  .about-image {
+    width: 150px;
+    height: 150px;
+  }
+
+}
+
+/* tablet */
+@media(min-width: 768px) and (max-width: 1023px) {
+
+}
+
+/* desktop */
+@media(min-width: 1024px) {
+}
