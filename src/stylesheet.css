@@ -165,7 +165,7 @@
     color: black;
   }
   .carousel-inner-caption {
-  height: 150px;
+  /* min-height: 150px; */
   padding-top: 8px;
   align-items: center;
   text-align: center;
@@ -180,6 +180,8 @@
 .carousel-inner-caption h3 {
   border-bottom: 2px solid grey;
 }
+
+
 .game-caption {
     position: relative !important;
     left: auto !important;
@@ -444,7 +446,7 @@
   .game-container {
     width: 100%;
     max-width: 100%;
-    height: auto !important;
+    min-height: 80vh;
   }
   .carousel-image {
     width: 90%;
@@ -470,7 +472,7 @@
   }
 
   .secondary-bg {
-    height: auto;
+    height: 480px;
   }
 
   .carousel-indicators {
@@ -507,6 +509,9 @@
 /* tablet */
 @media(min-width: 768px) and (max-width: 1023px) {
 
+  .carousel-inner {
+    height: auto !important;
+  }
   .api-card-section {
     margin: 0 2rem
   }
@@ -532,7 +537,7 @@
    .game-container {
     width: 100%;
     max-width: 100%;
-    height: auto !important;
+    min-height: 80vh;
   }
 
    .secondary-bg {
