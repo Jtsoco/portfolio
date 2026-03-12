@@ -13,6 +13,7 @@ import { RoadmapSubSection } from './currentProjectSubSections/RoadmapSubSection
 import { ApiSubSection } from './currentProjectSubSections/ApiSubSection';
 export function CurrentProjectSection(props: currentProjectProps) {
   const projectInfo = currentProjectInfo();
+  const isSmallScreen = window.innerWidth < window.innerHeight; // Example breakpoint for small screens
   return (
     <div className='section-page section-column' ref={props.targetRef}>
 
@@ -22,7 +23,7 @@ export function CurrentProjectSection(props: currentProjectProps) {
           {
             projectInfo.imageSections.map((imageSection, index) => (
               <div ref={props.subSectionRefs[imageSection.id]} key={index}>
-                <ImageSubSection key={index} className={imageSection.className} src={imageSection.src} alt={imageSection.alt} title={imageSection.title} id={imageSection.id} />
+                <ImageSubSection key={index} className={imageSection.className} src={isSmallScreen && imageSection.altSrc? imageSection.altSrc : imageSection.src} alt={imageSection.alt} title={imageSection.title} id={imageSection.id} />
               </div>
             ))
           }

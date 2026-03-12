@@ -91,7 +91,8 @@ export function currentProjectInfo() {
           src: 'current_project/architecture.png',
           alt: 'Architecture Diagram',
           title: 'Architecture Diagram',
-          id: 'architecture'
+          id: 'architecture',
+          altSrc: 'current_project/topdown-architecture.png'
         },
         {
           className: 'project-flow',
