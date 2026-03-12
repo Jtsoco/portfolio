@@ -72,11 +72,9 @@ export function SideNavBar(props: SideNavBarProps) {
   }
 
   const toggleRef = useRef<HTMLButtonElement | null>(null);
-  let placementStart = true;
   let fullName = true;
   if (window.matchMedia("(max-width: 768px)").matches) {
     fullName = false;
-    placementStart = false;
   }
   const getButtons = () => {
 
