@@ -462,13 +462,17 @@
 
 
   /* game section */
+
+  .section-bg {
+    padding: 0rem;
+  }
   .game-container {
     width: 100%;
     max-width: 100%;
     min-height: 80vh;
   }
   .carousel-image {
-    width: 90%;
+    width: 95%;
     height: auto;
     aspect-ratio: 1 / 1;
     max-width: 500px;
@@ -496,9 +500,10 @@
 
   .carousel-indicators {
     /* top: 400px !important; */
+    top: 0px !important;
     /* height: auto !important; */
-    position: relative !important;
-    top: auto !important;
+    position: absolute !important;
+    /* top: auto !important; */
 
   }
   .game-controls {
@@ -569,7 +574,7 @@
   }
 
   .game {
-    width: 100%;
+    width: 90%;
     height: auto;
     aspect-ratio: 1 / 1;
     /* max-width: 500px; */
@@ -579,7 +584,7 @@
     width: 90%;
     height: auto;
     aspect-ratio: 1 / 1;
-    max-width: 500px;
+    /* max-width: 500px; */
   }
 
    .game-container {
@@ -588,17 +593,23 @@
     min-height: 80vh;
   }
 
+
    .secondary-bg {
     height: auto;
   }
 
-   .carousel-indicators {
+  .carousel-indicators {
     /* top: 400px !important; */
-    height: auto !important;
-    position: unset !important;
+    top: 0px !important;
+    /* height: auto !important; */
+    position: absolute !important;
+    /* top: auto !important; */
+
   }
 }
 
 /* desktop */
 @media(min-width: 1024px) {
+
+
 }

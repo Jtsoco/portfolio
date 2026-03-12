@@ -29,7 +29,7 @@ export function GameSection(props: gameProps) {
 
   if (isGameLoaded) {
   return (
-    <div className='section-page section-column' ref={props.targetRef}>
+    <div className='section-page section-column section-bg' ref={props.targetRef}>
       <div className="flex-row space-between center-items full-width mb-16 load-buttons">
       <ButtonGroup >
 
