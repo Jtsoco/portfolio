@@ -29,9 +29,9 @@ export function GameSection(props: gameProps) {
 
   if (isGameLoaded) {
   return (
-    <div className='section-page section-column' ref={props.targetRef}>
-      <div className="flex-row space-between center-items full-width mb-16">
-      <ButtonGroup>
+    <div className='section-page section-column section-bg' ref={props.targetRef}>
+      <div className="flex-row space-between center-items full-width mb-16 load-buttons">
+      <ButtonGroup >
 
       <Button variant="secondary"  target="_blank" >Load Game</Button>
       <Button onClick={toggleGameLoad} variant="primary" >Unload</Button>
@@ -67,7 +67,7 @@ export function GameSection(props: gameProps) {
 } else {
   return (
     <div className='section-page section-column section-bg' ref={props.targetRef}>
-      <div className="flex-row space-between center-items full-width mb-16">
+      <div className="flex-row space-between center-items full-width mb-16 load-buttons">
       <ButtonGroup>
 
       <Button onClick={toggleGameLoad} variant="primary" >Load Game</Button><Button variant="secondary"  target="_blank"  >Unload</Button>

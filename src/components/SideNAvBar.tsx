@@ -72,32 +72,45 @@ export function SideNavBar(props: SideNavBarProps) {
   }
 
   const toggleRef = useRef<HTMLButtonElement | null>(null);
+  let fullName = true;
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    fullName = false;
+  }
+  const getButtons = () => {
 
-  return (
-    <div className="side-nav-bar" >
-      <Offcanvas show={show} onHide={() => setShow(false)} placement="start" scroll={true} backdrop={false} restoreFocus={false} enforceFocus={false}>
 
-
+    return (
         <Offcanvas.Body>
+          <div className="canvas-body-container">
           <div className="nav-header-container">
 
            <Button ref={toggleRef} className="side-nav-toggle" variant="outline-info" size='sm' onClick={collapseNonEssentialElements}>{collapsed ? '->' : '<-'}</Button>
-          <h5 ref={headerRef}>Current Project</h5>
+          <h5 ref={headerRef}>
+            {fullName ? 'Current Project' : ''}
+
+          </h5>
           </div>
-          <div className="navbar-buttons-container" ref={containerRef}>
+            <div className="navbar-buttons-container" ref={containerRef}>
             <Button className="navbar-button w-auto" size='sm' variant="primary" onClick={() => scrollToSection(props.sectionRef)}>
-              Overview
+              {fullName ? 'Overview' : 'top'}
             </Button>
-            {Object.entries(props.useLinkRefs).map(([id, ref]) => (
+            {Object.entries(props.useLinkRefs).map(([id, ref], index) => (
               <Button className="navbar-button w-auto" size='sm' variant="primary" key={id} onClick={() => scrollToSection(ref)}>
-                {id}
+                {fullName ? id : index + 1}
               </Button>
-              // <Nav.Link key={id} onClick={() => scrollToSection(ref)}>
-              //   {id}
-              // </Nav.Link>
             ))}
           </div>
+            </div>
         </Offcanvas.Body>
+    )
+  }
+
+  return (
+    <div className="side-nav-bar" >
+      <Offcanvas show={show} onHide={() => setShow(false)} placement={"start"} scroll={true} backdrop={false} restoreFocus={false} enforceFocus={false}>
+
+    {getButtons()}
+
       </Offcanvas>
 
     </div>

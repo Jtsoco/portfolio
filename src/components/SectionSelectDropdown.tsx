@@ -23,8 +23,9 @@ export function SectionSelectDropdown(props: SectionSelectDropdownProps) {
       const element = document.querySelector('.section-select-dropdown');
       setShow(entry.isIntersecting);
 
+
       if (element) {
-        if (show) {
+        if (entry.isIntersecting) {
           element.classList.remove('hidden');
           element.classList.add('visible');
         }
@@ -35,7 +36,7 @@ export function SectionSelectDropdown(props: SectionSelectDropdownProps) {
 
       }
 
-    }, { threshold: 0.1 });
+    }, { threshold: 0.0 });
 
 
     if (props.nonTopRef.current) {
@@ -47,7 +48,7 @@ export function SectionSelectDropdown(props: SectionSelectDropdownProps) {
         observer.unobserve(props.nonTopRef.current);
       }
     };
-  })
+  }, []);
 
   return (
     <div className="section-select-dropdown fade-in">
