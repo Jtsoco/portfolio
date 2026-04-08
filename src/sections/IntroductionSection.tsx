@@ -3,6 +3,7 @@ interface introProps {
   targetRef: React.RefObject<null | HTMLElement>;
   gameTargetRef: React.RefObject<null | HTMLElement>;
   currentProjectTargetRef: React.RefObject<null | HTMLElement>;
+  projectsTargetRef: React.RefObject<null | HTMLElement>;
   introductionRef: React.RefObject<null | HTMLDivElement>;
 };
 
@@ -27,6 +28,7 @@ export function IntroductionSection(props: introProps) {
         <Button onClick={() => scrollToSection(props.targetRef)}variant="primary" >About Me and Projects</Button>
         <Button onClick={() => scrollToSection(props.gameTargetRef)} >Play My Game</Button>
         <Button onClick={() => scrollToSection(props.currentProjectTargetRef)} >Current Project</Button>
+        <Button onClick={() => scrollToSection(props.projectsTargetRef)} >Projects</Button>
         <a target="_blank" href="https://github.com/Jtsoco/">
           <Button >
             <Image src={'general-tech-stack/icons8-github-50.png'} alt="GitHub Repository" className="github-icon"/>

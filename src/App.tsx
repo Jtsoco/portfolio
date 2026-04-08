@@ -43,7 +43,7 @@ function App() {
     }}>
         <SideNavBar useLinkRefs={currentProjectSubSectionRefs} sectionRef={currentProjectTargetRef}></SideNavBar>
         <SectionSelectDropdown useLinkRefs={dropDownLinkRefs} nonTopRef={nonTopRef} ></SectionSelectDropdown>
-        <IntroductionSection targetRef={targetRef} gameTargetRef={gameTargetRef} currentProjectTargetRef={currentProjectTargetRef} introductionRef={introductionRef}/>
+        <IntroductionSection targetRef={targetRef} gameTargetRef={gameTargetRef} currentProjectTargetRef={currentProjectTargetRef} projectsTargetRef={projectsTargetRef} introductionRef={introductionRef}/>
 
         <div ref={nonTopRef}>
 
