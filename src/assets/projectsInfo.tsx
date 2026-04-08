@@ -32,7 +32,7 @@ export function getProjects(): ProjectCard[] {
       shortDescription: 'EPUB to flashcard backend service',
       description: 'A backend service that processes EPUB files and generates flashcard lists for studying. Built with Django, Celery, and Redis for asynchronous task processing. V1 focuses on core backend architecture and API, with frontend coming soon.',
       techStack: [
-        'icons8-django-100.png',
+        'icons8-django-96.png',
         'icons8-python.svg',
         'icons8-postgresql-96.png',
         'icons8-redis-96.png',
@@ -67,16 +67,13 @@ export function getProjects(): ProjectCard[] {
         },
         {
           label: 'User authentication and authorization',
-          status: 'in-progress',
+          status: 'completed',
         },
         {
           label: 'Frontend React application',
           status: 'planned',
         },
-        {
-          label: 'AI-powered flashcard generation',
-          status: 'planned',
-        },
+
       ],
     },
   ];

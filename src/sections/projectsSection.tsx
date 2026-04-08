@@ -15,7 +15,7 @@ export function ProjectsSection(props: ProjectsSectionProps) {
     <div className='section-page section-column' ref={props.targetRef}>
       <Container className='py-5'>
         {/* Section Title */}
-        <Row className='mb-5'>
+        <Row className='mb-5 projects-section-title'>
           <Col>
             <h1 className='display-5 fw-bold mb-3'>Projects</h1>
             <p className='lead text-muted'>

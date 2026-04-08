@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Card, Badge, Container, Row, Col } from 'react-bootstrap';
-import { ProjectCard } from '../../assets/projectsInfo';
+import { Card, Badge } from 'react-bootstrap';
+import type { ProjectCard } from '../../assets/projectsInfo';
 import '../../stylesheet.css';
 
 interface ExpandableProjectCardProps {
@@ -17,35 +17,48 @@ export function ExpandableProjectCard({ project }: ExpandableProjectCardProps) {
   };
 
   return (
-    <Card className='project-card expandable-project-card mb-3' onClick={() => setIsExpanded(!isExpanded)}>
-      <Card.Body className='cursor-pointer'>
-        {/* Header Section */}
-        <div className='d-flex justify-content-between align-items-start mb-2'>
-          <div className='flex-grow-1'>
-            <Card.Title className='mb-2'>{project.title}</Card.Title>
-            <Card.Subtitle className='text-muted mb-3'>
-              {project.shortDescription}
-            </Card.Subtitle>
-          </div>
-          <Badge bg={statusColors[project.status]} className='ms-2'>
-            {project.status}
-          </Badge>
+    <Card className='expandable-project-card mb-3 cursor-pointer position-relative' onClick={() => setIsExpanded(!isExpanded)}>
+      {/* Status Badge - Top Right */}
+      <Badge
+        bg={statusColors[project.status]}
+        className='position-absolute top-0 end-0 m-3'
+      >
+        {project.status}
+      </Badge>
+
+      <Card.Body>
+        {/* Header Section - Centered */}
+        <div className='mb-2 text-center'>
+          <Card.Title className='mb-2'>{project.title}</Card.Title>
+          <Card.Subtitle className='text-muted'>
+            {project.shortDescription}
+          </Card.Subtitle>
         </div>
 
-        {/* Tech Stack */}
+        {/* Tech Stack Icons - Centered */}
         <div className='mb-3'>
-          <div className='tech-stack-badges'>
+          <div className='tech-stack-icons-small justify-content-center'>
             {project.techStack.map((tech, index) => (
-              <Badge key={index} bg='light' text='dark' className='me-2 mb-2'>
-                {tech.replace(/icons8-|\.png|\.svg|-96|-100/g, '').replace(/-/g, ' ')}
-              </Badge>
+              <img
+                key={index}
+                src={`/current_project/techstack/${tech}`}
+                alt={tech.replace(/icons8-|\.png|\.svg|-96|-100/g, '')}
+                className='tech-icon-small'
+                title={tech.replace(/icons8-|\.png|\.svg|-96|-100/g, '').replace(/-/g, ' ')}
+              />
             ))}
           </div>
         </div>
 
         {/* GitHub Link */}
         <div className='mb-3'>
-          <a href={project.githubLink} target='_blank' rel='noopener noreferrer' className='btn btn-sm btn-outline-primary'>
+          <a
+            href={project.githubLink}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='btn btn-sm btn-outline-primary'
+            onClick={(e) => e.stopPropagation()}
+          >
             View on GitHub
           </a>
         </div>
@@ -63,9 +76,9 @@ export function ExpandableProjectCard({ project }: ExpandableProjectCardProps) {
             {project.features && project.features.length > 0 && (
               <div className='mb-3'>
                 <h6 className='fw-bold'>Features</h6>
-                <ul className='mb-0'>
+                <ul className='features-list'>
                   {project.features.map((feature, index) => (
-                    <li key={index} className='text-muted small'>
+                    <li key={index} className='text-muted'>
                       {feature}
                     </li>
                   ))}
@@ -77,23 +90,21 @@ export function ExpandableProjectCard({ project }: ExpandableProjectCardProps) {
             {project.roadmap && project.roadmap.length > 0 && (
               <div className='mb-3'>
                 <h6 className='fw-bold'>Roadmap</h6>
-                <div className='roadmap-list'>
+                <div className='project-roadmap-list'>
                   {project.roadmap.map((item, index) => (
-                    <div key={index} className='roadmap-item small mb-2'>
+                    <div key={index} className='project-roadmap-item'>
+                      <span className='roadmap-text'>{item.label}</span>
                       <Badge
                         bg={
                           item.status === 'completed'
                             ? 'success'
                             : item.status === 'in-progress'
-                              ? 'primary'
-                              : 'light'
+                              ? 'warning'
+                              : 'secondary'
                         }
-                        text={item.status === 'planned' ? 'dark' : ''}
-                        className='me-2'
                       >
                         {item.status}
                       </Badge>
-                      <span className='text-muted'>{item.label}</span>
                     </div>
                   ))}
                 </div>
@@ -111,6 +122,7 @@ export function ExpandableProjectCard({ project }: ExpandableProjectCardProps) {
                       target='_blank'
                       rel='noopener noreferrer'
                       className='btn btn-sm btn-outline-info'
+                      onClick={(e) => e.stopPropagation()}
                     >
                       Backend
                     </a>
@@ -123,6 +135,7 @@ export function ExpandableProjectCard({ project }: ExpandableProjectCardProps) {
                       target='_blank'
                       rel='noopener noreferrer'
                       className='btn btn-sm btn-outline-success'
+                      onClick={(e) => e.stopPropagation()}
                     >
                       Frontend
                     </a>
