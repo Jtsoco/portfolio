@@ -41,7 +41,7 @@ export function ExpandableProjectCard({ project }: ExpandableProjectCardProps) {
             {project.techStack.map((tech, index) => (
               <img
                 key={index}
-                src={`/current_project/techstack/${tech}`}
+                src={`general-tech-stack/${tech}`}
                 alt={tech.replace(/icons8-|\.png|\.svg|-96|-100/g, '')}
                 className='tech-icon-small'
                 title={tech.replace(/icons8-|\.png|\.svg|-96|-100/g, '').replace(/-/g, ' ')}

@@ -29,7 +29,7 @@ export function IntroductionSection(props: introProps) {
         <Button onClick={() => scrollToSection(props.currentProjectTargetRef)} >Current Project</Button>
         <a target="_blank" href="https://github.com/Jtsoco/">
           <Button >
-            <Image src={'current_project/techstack/icons8-github-50.png'} alt="GitHub Repository" className="github-icon"/>
+            <Image src={'general-tech-stack/icons8-github-50.png'} alt="GitHub Repository" className="github-icon"/>
               Github
           </Button>
         </a>
