@@ -614,3 +614,177 @@
 
 
 }
+
+/* Projects Section Styles */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.expandable-project-card {
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ddd;
+  background-color: #F3F4F6;
+}
+
+.expandable-project-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.expanded-content {
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+  }
+  to {
+    opacity: 1;
+    max-height: 1000px;
+    overflow: visible;
+  }
+}
+
+/* Tech stack icons - small versions */
+.tech-stack-icons-small {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech-icon-small {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 4px;
+  background-color: white;
+}
+
+/* Features list styling - centered */
+.features-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.features-list li {
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+}
+
+.features-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #198754;
+  font-weight: bold;
+}
+
+/* Project roadmap styling - matches Bootstrap ListGroup */
+.project-roadmap-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.project-roadmap-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: #FFF;
+  border: 1px solid #dee2e6;
+  border-bottom: none;
+}
+
+.project-roadmap-item:last-child {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.project-roadmap-item .roadmap-text {
+  flex: 1;
+  color: #212529;
+  font-size: 0.95rem;
+}
+
+.project-roadmap-item .badge {
+  font-size: 0.75rem;
+  padding: 0.35rem 0.6rem;
+  min-width: 70px;
+  text-align: center;
+  margin-left: 1rem;
+}
+
+/* Projects section title and layout */
+.projects-section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.projects-section-title h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: black;
+}
+
+.projects-section-title .lead {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .expandable-project-card {
+    margin-bottom: 1rem;
+  }
+
+  .tech-stack-icons-small {
+    gap: 0.25rem;
+  }
+
+  .tech-icon-small {
+    width: 40px;
+    height: 40px;
+  }
+
+  .features-list li {
+    padding-left: 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  .project-roadmap-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .project-roadmap-item .badge {
+    align-self: flex-end;
+  }
+
+  .projects-section-title h1 {
+    font-size: 1.8rem;
+  }
+
+  .projects-section-title .lead {
+    font-size: 0.95rem;
+  }
+}
