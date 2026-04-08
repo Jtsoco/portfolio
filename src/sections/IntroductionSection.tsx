@@ -25,7 +25,7 @@ export function IntroductionSection(props: introProps) {
         <h2> I'm a Programmer and a Teacher </h2>
         <div className="button-container">
 
-        <Button onClick={() => scrollToSection(props.targetRef)}variant="primary" >About Me and Projects</Button>
+        <Button onClick={() => scrollToSection(props.targetRef)}variant="primary" >About Me</Button>
         <Button onClick={() => scrollToSection(props.gameTargetRef)} >Play My Game</Button>
         <Button onClick={() => scrollToSection(props.currentProjectTargetRef)} >Current Project</Button>
         <Button onClick={() => scrollToSection(props.projectsTargetRef)} >Projects</Button>
