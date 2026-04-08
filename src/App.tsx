@@ -7,6 +7,7 @@ import { LanguageContext } from './contexts/languageContext'
 import { EnglishText, JapaneseText} from './assets/text'
 import { GameSection } from './sections/gameSection'
 import { CurrentProjectSection } from './sections/currentProjectSection'
+import { ProjectsSection } from './sections/projectsSection'
 import { SideNavBar } from './components/SideNAvBar'
 import { useLinkRefs } from './sections/currentProjectSubSections/useLinkRefs'
 import { SectionSelectDropdown } from './components/SectionSelectDropdown'
@@ -18,6 +19,7 @@ function App() {
   const targetRef = useRef(null);
   const gameTargetRef = useRef(null);
   const currentProjectTargetRef = useRef(null);
+  const projectsTargetRef = useRef(null);
   const currentProjectSubSectionRefs = useLinkRefs();
   const nonTopRef = useRef(null);
   const introductionRef = useRef(null);
@@ -26,6 +28,7 @@ function App() {
     'About': targetRef,
     'Game': gameTargetRef,
     'Current Project': currentProjectTargetRef,
+    'Projects': projectsTargetRef,
   }
 
   return (
@@ -47,7 +50,7 @@ function App() {
           <AboutSection targetRef={targetRef}/>
           <GameSection targetRef={gameTargetRef}/>
           <CurrentProjectSection targetRef={currentProjectTargetRef} subSectionRefs={currentProjectSubSectionRefs}/>
-          {/* next section is current project, show wireframe and database schema from book app */}
+          <ProjectsSection targetRef={projectsTargetRef}/>
         </div>
 
     </LanguageContext.Provider>
