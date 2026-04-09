@@ -1,6 +1,6 @@
 const EnglishText = {
   about: {
-    paragraph1: "Hello! I'm Jackson Socolofsky, a programmer and teacher. I moved to Japan in 2017, and have been working here since. I also earned a postbacc bachelor's in Computer Science in March 2026. During my work at a programming school, I have utilized python, typescript, javascript, react, django, and more while developing a python course aimed at beginners."
+    paragraph1: "Hello! I'm Jackson Socolofsky, a programmer and teacher. I moved to Japan in 2017, and have been working here since. I also earned a postbacc bachelors in Computer Science in March 2026. During my work at a programming school, I have utilized python, typescript, javascript, react, django, and more while developing a python course aimed at beginners."
   },
   sections: {
     projects: "Projects"
